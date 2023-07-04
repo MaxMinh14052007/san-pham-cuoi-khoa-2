@@ -1,0 +1,282 @@
+/* ctrl shift p wrap: gói vào 1 thẻ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.thong-bao-tet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffb347;
+  background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);
+  background: linear-gradient(to right, #ffcc33, #ffb347);
+
+  padding: 5px;
+}
+.header-right p {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-family: "Merriweather", serif;
+  margin-right: 30px;
+}
+.header {
+  background: #f85032;
+  background: -webkit-linear-gradient(to right, #e73827, #f85032);
+  background: linear-gradient(to right, #e73827, #f85032);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header #logo-web {
+  margin-left: 50px;
+  font-family: "Tilt Prism", cursive;
+  font-size: 19px;
+  margin-top: 12px;
+}
+.header i {
+  /* margin-left: 28px; */
+  font-size: 25px;
+  transition: all 0.2s;
+}
+.header i:hover {
+  transform: scale(1.2);
+}
+.header-right {
+  margin-left: auto;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+#icon-dt {
+  margin-right: 15px;
+}
+.header-center {
+  display: flex;
+  color: white;
+  align-items: center;
+  margin: auto;
+}
+.header-center :hover {
+  color: black;
+  text-decoration: none;
+}
+.header-center p {
+  /* margin-left: 40px; */
+  text-align: center;
+  margin-bottom: 0;
+}
+.header-center i {
+  text-align: center;
+}
+.dien-thoai {
+  flex-flow: column;
+  text-decoration: none;
+}
+.dong-ho {
+  flex-flow: column;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+.tivi {
+  flex-flow: column;
+  margin-top: px;
+  text-decoration: none;
+}
+.ipad {
+  flex-flow: column;
+  margin-bottom: 3px;
+  text-decoration: none;
+}
+.laptop {
+  flex-flow: column;
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+.gio-hang i {
+  font-size: larger;
+}
+.user {
+  flex-flow: column;
+}
+.user i {
+  font-size: larger;
+}
+/* day la phan san pham */
+.san-pham-dienthoai {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75%;
+  margin: auto;
+  background-color: #f3f4f6;
+}
+.san-pham-dienthoai .card-sanpham {
+  width: calc(25% - 20px);
+  border: solid white 2px;
+  margin: 10px;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  background-color: white;
+  border-radius: 5%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.giam-gia {
+  position: absolute;
+  border-top-left-radius: 50%;
+  color: #d70018;
+  width: 30px;
+  height: 30px;
+  left: -15;
+  top: -1;
+}
+.san-pham-dienthoai .card-sanpham img {
+  display: block;
+  width: 90%;
+  margin-top: 45px;
+  margin-left: 20px;
+  object-fit: cover;
+}
+.card-sanpham span {
+  color: #d70018;
+}
+.slider {
+  height: 690px;
+}
+
+#footer {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #e65c00;
+  background: -webkit-linear-gradient(to right, #f9d423, #e65c00);
+  background: linear-gradient(to right, #f9d423, #e65c00);
+
+  font-family: "Lato", sans-serif;
+  margin-top: 20px;
+}
+#footer b {
+  margin-bottom: 0;
+  color: black;
+  display: block;
+}
+#footer a {
+  text-decoration: none;
+}
+#footer p {
+  margin-bottom: 0;
+}
+#gmail {
+  width: fit-content;
+  margin: auto;
+}
+#footer i {
+  font-size: 25px;
+  color: black;
+  margin-left: 6px;
+  transition: all 0.5s;
+  opacity: 0.8;
+}
+#footer i:hover {
+  opacity: 0.55;
+}
+.card-sanpham s {
+  color: gray;
+}
+#gioi-thieu-dt {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+#gioi-thieu-dh {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+#gioi-thieu-tv {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+#gioi-thieu-ipad {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+#gioi-thieu-laptop {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+.gia {
+  margin-top: auto;
+  padding-bottom: 6px;
+  margin-left: 13px;
+}
+.gia-ban {
+  margin-right: 6px;
+}
+.card-sanpham h4 {
+  margin-left: 13px;
+}
+.navbar {
+  background: #f85032;
+  background: -webkit-linear-gradient(to right, #e73827, #f85032);
+  background: linear-gradient(to right, #e73827, #f85032);
+  margin-left: 23px;
+}
+.mo-rong {
+  text-align: center;
+}
+.mo-rong .btn {
+  width: 150px;
+}
+.card-sanpham h5 {
+  margin-left: 13px;
+}
+.tag {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 30px;
+  display: table-cell;
+  border-radius: 100%;
+}
+.tag p {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0;
+  margin-top: 6px;
+}
+#trang-sanpham {
+  background-color: #f3f4f6;
+}
+#muiten {
+  position: relative;
+  left: 95%;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.header-center ul {
+  list-style-type: none;
+  display: flex;
+  padding-bottom: 9px;
+  align-items: center;
+}
+/* .header-center li:hover{
+  background-color: white;
+} */
+.header-center i {
+  margin: auto;
+}
+.header-center-con {
+  margin-left: 50px;
+  height: 49px;
+}

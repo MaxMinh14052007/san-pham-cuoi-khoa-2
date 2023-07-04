@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.menu {
+  background: #333;
+  height: 40px;
+}
+.menu li {
+  list-style: none;
+  margin-right: 10px;
+  width: 120px;
+}
+.menu_nho {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  height: 100%;
+}
+.menu_nho li a {
+  padding-bottom: 9.5px;
+  padding-top: 11.5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.menu li :hover {
+  background-color: #343;
+}
+.menu li ul li {
+  /* display: none; */
+  width: 100%;
+  margin-top: 10px;
+}
+.menu li:hover ul li {
+  display: block;
+}
+.menu li a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.menu ul {
+  padding: 0;
+}
+#thong-tin {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+#gioi-thieu {
+  margin-right: 200px;
+  width: 400px;
+  margin-top: 70px;
+}
+#form {
+  background-color: #0c0c4a;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+#form p {
+  color: white;
+}
+input[type="text"] {
+  width: 400px;
+}
+#Questions {
+  padding-bottom: 200px;
+}
