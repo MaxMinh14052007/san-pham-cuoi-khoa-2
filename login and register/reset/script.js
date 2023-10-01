@@ -1,4 +1,4 @@
-import { getAuth, sendPasswordResetEmail } from "../login/firebaseAuth.js";
+import { getAuth, sendPasswordResetEmail } from "../login(new)/firebaseAuth.js";
 
 document
   .getElementById("button-resetpassword")

@@ -39,7 +39,14 @@ document.getElementById("login").addEventListener("click", function () {
       // Signed in
       const user = userCredential.user;
       console.log(user);
-      alert(user.email + " Login successfully!!!");
+      // alert(user.email + " Login successfully!!!");
+      if (email == "admin@gmail.com") {
+        window.location.href =
+          "http://127.0.0.1:5500/sanphamcuoikhoa/danhsachsanpham/index.html"; //trang table
+      } else {
+        window.location.href =
+          "http://127.0.0.1:5500/sanphamcuoikhoa/chitietsanpham/products.html"; //trang chi tiet san pham
+      }
       document.getElementById("logout").style.display = "block";
       // ...
     })
@@ -51,6 +58,7 @@ document.getElementById("login").addEventListener("click", function () {
     });
 });
 
+//logout
 document.getElementById("logout").addEventListener("click", function () {
   signOut(auth)
     .then(() => {

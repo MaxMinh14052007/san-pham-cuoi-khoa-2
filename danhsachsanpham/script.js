@@ -74,8 +74,15 @@ function deleteTr(id) {
   products = deleted;
   getProducts(products);
 }
-var logoutBtn = document.getElementById("btn");
+var logoutBtn = document.getElementById("logout");
 logoutBtn.addEventListener("click", function () {
-  localStorage.removeItem("user");
-  window.location.href = "../login/login.html";
+  // localStorage.removeItem("user");
+  window.location.href =
+    "http://127.0.0.1:5500/sanphamcuoikhoa/login%20and%20register/login(new)/index.html";
 });
+
+fetch("http://localhost:8080/api/tutorials")
+  .then((response) => response.json())
+  .then((data) => {
+    
+  });
