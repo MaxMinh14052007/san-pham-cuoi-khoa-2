@@ -1,15 +1,38 @@
-import products from "../danhsachsanpham/data.js";
-console.log(products);
-var currentUser = JSON.parse(localStorage.getItem("user"));
-var usernameTag = document.getElementById("name");
-if (currentUser) {
-  usernameTag.innerHTML = "Xin chào" + " " + currentUser.username;
-  document.getElementById("chuadangnhap").style.display = "none";
-} else {
-  document.getElementById("dadangnhap").style.display = "none";
-}
-var logoutBtn = document.getElementById("btn");
-logoutBtn.addEventListener("click", function () {
-  localStorage.removeItem("user");
-  window.location.href = "../login/login.html";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signOut,
+} from "../login and register/login(new)/firebaseAuth.js";
+
+const auth = getAuth();
+const user = auth.currentUser;
+
+// //logout
+document.getElementById("btn").addEventListener("click", function () {
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+      console.log("Sign-out successful.");
+      alert("Sign-out successful.");
+      document.getElementById("logout").style.display = "none";
+    })
+    .catch((error) => {
+      // An error happened.
+      console.log("An error happened.");
+    });
+});
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    const email = user.email;
+    const username = email.split("@")[0];
+    document.getElementById("chuadangnhap").classList.add("hidden");
+    document.getElementById("name").innerHTML = "Hello" + " " + username;
+  } else {
+    // User is signed out
+    document.getElementById("chuadangnhap").classList.remove("hidden");
+    document.getElementById("dadangnhap").classList.add("hidden");
+  }
 });

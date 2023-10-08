@@ -58,20 +58,20 @@ document.getElementById("login").addEventListener("click", function () {
     });
 });
 
-//logout
-document.getElementById("logout").addEventListener("click", function () {
-  signOut(auth)
-    .then(() => {
-      // Sign-out successful.
-      console.log("Sign-out successful.");
-      alert("Sign-out successful.");
-      document.getElementById("logout").style.display = "none";
-    })
-    .catch((error) => {
-      // An error happened.
-      console.log("An error happened.");
-    });
-});
+// //logout
+// document.getElementById("logout").addEventListener("click", function () {
+//   signOut(auth)
+//     .then(() => {
+//       // Sign-out successful.
+//       console.log("Sign-out successful.");
+//       alert("Sign-out successful.");
+//       document.getElementById("logout").style.display = "none";
+//     })
+//     .catch((error) => {
+//       // An error happened.
+//       console.log("An error happened.");
+//     });
+// });
 
 //show password login
 var eyeOpen0 = document.getElementById("eye-open");

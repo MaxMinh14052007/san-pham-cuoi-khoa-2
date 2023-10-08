@@ -81,8 +81,33 @@ logoutBtn.addEventListener("click", function () {
     "http://127.0.0.1:5500/sanphamcuoikhoa/login%20and%20register/login(new)/index.html";
 });
 
-fetch("http://localhost:8080/api/tutorials")
+function openCreateModal() {
+  createModal.style.display = "block";
+}
+
+// Close the create modal
+function closeCreateModal() {
+  createModal.style.display = "none";
+}
+
+const newTutorial = {
+  title: title,
+  description: description,
+  published: published,
+};
+
+fetch("http://localhost:8080/api/tutorials", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(newTutorial),
+})
   .then((response) => response.json())
   .then((data) => {
-    
-  });
+    alert("Tutorial created successfully.");
+    location.reload();
+  })
+  .catch((error) => console.error("Error creating tutorial:", error));
+
+closeCreateModal();
