@@ -1,4 +1,9 @@
 import productsData from "./data.js";
+import {
+  getAuth,
+  onAuthStateChanged,
+} from "../login and register/login(new)/firebaseAuth.js";
+
 var products = productsData;
 
 function getProducts(products) {
@@ -81,33 +86,45 @@ logoutBtn.addEventListener("click", function () {
     "http://127.0.0.1:5500/sanphamcuoikhoa/login%20and%20register/login(new)/index.html";
 });
 
-function openCreateModal() {
-  createModal.style.display = "block";
-}
+// function openCreateModal() {
+//   createModal.style.display = "block";
+// }
 
-// Close the create modal
-function closeCreateModal() {
-  createModal.style.display = "none";
-}
+// // Close the create modal
+// function closeCreateModal() {
+//   createModal.style.display = "none";
+// }
 
-const newTutorial = {
-  title: title,
-  description: description,
-  published: published,
-};
+// const newTutorial = {
+//   title: title,
+//   description: description,
+//   published: published,
+// };
 
-fetch("http://localhost:8080/api/tutorials", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(newTutorial),
-})
-  .then((response) => response.json())
-  .then((data) => {
-    alert("Tutorial created successfully.");
-    location.reload();
-  })
-  .catch((error) => console.error("Error creating tutorial:", error));
+// fetch("http://localhost:8080/api/tutorials", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify(newTutorial),
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     alert("Tutorial created successfully.");
+//     location.reload();
+//   })
+//   .catch((error) => console.error("Error creating tutorial:", error));
 
-closeCreateModal();
+// closeCreateModal();
+
+//ngan nguoi ko phai admin vao trang
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log(user);
+    // https://firebase.google.com/docs/reference/js/auth.user
+  } else {
+    window.location.href =
+      "http://127.0.0.1:5500/sanphamcuoikhoa/login%20and%20register/login(new)/index.html";
+  }
+});

@@ -2,6 +2,7 @@ import {
   getAuth,
   onAuthStateChanged,
   signOut,
+  deleteUser,
 } from "../login and register/login(new)/firebaseAuth.js";
 
 const auth = getAuth();
@@ -29,7 +30,7 @@ onAuthStateChanged(auth, (user) => {
     const email = user.email;
     const username = email.split("@")[0];
     document.getElementById("chuadangnhap").classList.add("hidden");
-    document.getElementById("name").innerHTML = "Hello" + " " + username;
+    document.getElementById("name").innerHTML = "Xin chào" + " " + username;
   } else {
     // User is signed out
     document.getElementById("chuadangnhap").classList.remove("hidden");

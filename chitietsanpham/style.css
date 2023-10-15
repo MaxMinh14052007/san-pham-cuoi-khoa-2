@@ -46,7 +46,7 @@
   transform: scale(1.2);
 }
 .header-right {
-  margin-left: auto;
+  margin-left: 20px;
   margin-right: 30px;
   display: flex;
   align-items: center;
@@ -322,4 +322,49 @@
 
 .hidden {
   display: none;
+}
+/* Đảm bảo trang web co lại và phông chữ tự động thay đổi khi màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Header và footer tương thích với màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+
+  .header #logo-web {
+    font-size: 16px;
+  }
+
+  .header i {
+    font-size: 20px;
+  }
+
+  .header-right p {
+    font-size: 15px;
+  }
+
+  #footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #footer i {
+    font-size: 20px;
+    margin-left: 4px;
+  }
+}
+
+/* Sản phẩm trên trang web hiển thị theo cột trên màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .san-pham-dienthoai .card-sanpham {
+    width: 100%;
+  }
+}
+body {
+  overflow-x: hidden;
 }
